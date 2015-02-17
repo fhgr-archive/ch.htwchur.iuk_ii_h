@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<title>Phonebook</title>
+<script src="jquery-2.1.0.js"></script>
+<script src="phonebook.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var phonebook = new PHONEBOOK.Phonebook ([ 
+			new PHONEBOOK.Entry("Fritz", "Fischer", "081 111 11 11"), 
+			new PHONEBOOK.Entry("Hans", "Huber", "081 222 22 22")
+	]);
+
+	// all entries
+	phonebook.addLisToElementWithId("entries");
+	
+	// selected entries
+	function filterByLastName() {
+		var lastName = $("#lastName").val();
+		phonebook.addLisToElementWithIdWithLastNameContaining ("entries", lastName);
+		return false;
+	}
+	
+	$("#filterByLastNameForm").submit(filterByLastName);
+});
+</script>
+
+</head>
+
+<body>
+
+<h1>Entries</h1>
+<ol id="entries">
+</ol>
+<h1>Suche</h1>
+<form id="filterByLastNameForm" xonsubmit="return filterByLastName()">
+	Name: <input id="lastName" type="text"> <input type="submit" value="Suche">
+</form>
+</body>
+
+</html>

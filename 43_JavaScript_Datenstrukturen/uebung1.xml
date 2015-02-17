@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/04 Datenstrukturen</text>
+
+    </category>
+  </question>
+
+<!-- question: 2645  -->
+  <question type="essay">
+    <name>
+      <text>eigene Objekte erzeugen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Die Einträge in einem Telefonbuch enthalten jeweils Vornamen, Nachnamen und die Telefonnummern. Einträge sollen durch Objekte mit Eigenschaften vorname, nachname und telefonnummer dargestellt werden. Das Telefonbuch selber ist ein Array von Einträgen.</p>
+<ol>
+<li>Erzeugen Sie ein Telefonbuch mit den Einträgen Fritz Fischer, 081 111 11 11 und Hans Huber, 081 222 22 22. Benutzen Sie für die Erzeugen der Einträge einen Objekt-Initialisierer (Objekt-Literal). Speichern Sie das Telefonbuch in einer Variable telefonbuch.</li>
+<li>Schreiben Sie eine Funktion <code>sucheNummer</code>, die als Argument das Telefonbuch sowie den zu suchenden Nachnamen erhält und die Telefonnummer des entsprechenden Eintrages zurückgibt. Falls kein Eintrag mit diesem Namen existiert, soll <code>null </code>zurückgegeben werden.</li>
+</ol>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>// Teilaufgabe 1</p>
+<div>
+<p class="TeilaufgabeCode">var e1 = { vorname: "Fritz", nachname: "Fischer", telefonnummer: "081 111 11 11" };</p>
+<p class="TeilaufgabeCode">var e2 = { vorname: "Hans", nachname: "Huber", telefonnummer: "081 222 22 22" };</p>
+<p class="TeilaufgabeCode">var telefonbuch = [ e1, e2];</p>
+<p class="TeilaufgabeCode"> </p>
+<p class="TeilaufgabeCode">// Teilaufgabe 2</p>
+<div>function sucheNummer(telefonbuch, nachname) {<br />    for (var index = 0; index &lt; telefonbuch.length; index++) {<br />        var eintrag = telefonbuch[index];<br />        if (eintrag.nachname === nachname) {<br />            return eintrag.telefonnummer;<br />        }<br />    }<br />    return null;<br />}<br /><br /></div>
+</div>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>20</responsefieldlines>
+    <attachments>0</attachments>
+    <graderinfo format="html">
+      <text></text>
+    </graderinfo>
+  </question>
+
+<!-- question: 2646  -->
+  <question type="essay">
+    <name>
+      <text>remove-Funktion für Arrays</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Schreiben Sie eine Funktion remove, welche aus einem Array ein Element entfernt.<br /><span style="font-family: courier new,courier,monospace;">/**</span><br /><span style="font-family: courier new,courier,monospace;"> * Remove item with given index from given array.</span><br /><span style="font-family: courier new,courier,monospace;"> * </span><br /><span style="font-family: courier new,courier,monospace;"> * @param {Array} a the array to remove an element from</span><br /><span style="font-family: courier new,courier,monospace;"> * @param {Number} index the index of the element to remove</span><br /><span style="font-family: courier new,courier,monospace;"> * @returns a new array with the element removed</span><br /><span style="font-family: courier new,courier,monospace;"> */</span><br /><br />Hinweis:</p>
+<ul>
+<li>Sie dürfen die bestehende Funktion <span style="font-family: courier new,courier,monospace;">splice</span> nicht verwenden.</li>
+<li>Verwenden Sie die bestehenden Funktionen <span style="font-family: courier new,courier,monospace;">slice</span> und <span style="font-family: courier new,courier,monospace;">concat</span>.</li>
+</ul>
+<p> </p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>function remove(a, index) {<br />    return a.slice(a, index).concat(a.slice(index+1, a.length-index+1));<br />}<br /><br /></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>10</responsefieldlines>
+    <attachments>0</attachments>
+    <graderinfo format="html">
+      <text></text>
+    </graderinfo>
+  </question>
+
+<!-- question: 2637  -->
+  <question type="cloze">
+    <name>
+      <text>mit Arrays umgehen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Schreiben Sie JavaScript-Code gemäss Aufgabenstellung:</p>
+<p><br />a)    Erzeugen Sie ein neues leeres Array und speichern Sie es in einer neuen Variable mit den Namen <code>a</code>:</p>
+<p style="padding-left: 30px;">{1:SHORTANSWER:=var a} = {1:SHORTANSWER:=[]~=[ \]} ;</p>
+<p><br />b)    Setzen Sie den Wert <code>"abc"</code> an die Stelle <code>"3":</code></p>
+<pre style="padding-left: 30px;">{1:SHORTANSWER:=a["3"]~=a[3]~=a[3'] = {1:SHORTANSWER:="abc"~='abc'} ;</pre>
+<p><br />c)    Geben Sie mit Hilfe einer for-Schleife alle Werte des Arrays aus:</p>
+<div>
+<pre style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">for (var index = {1:SHORTANSWER:=0}; index &lt; a.{1:SHORTANSWER:=length}; {1:SHORTANSWER:=index++}) {<br />  console.log(a{1:SHORTANSWER:=[index]});<br />}</span></pre>
+</div>
+<p> </p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+  </question>
+
+<!-- question: 2630  -->
+  <question type="cloze">
+    <name>
+      <text>mit Objekte umgehen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Schreiben Sie JavaScript-Code gemäss Aufgabenstellung:</p>
+<p><br />a)    Erzeugen Sie ein neues Objekt ohne Eigenschaften und speichern Sie es in einer neuen Variable mit den Namen o.</p>
+<p style="padding-left: 30px;">{1:SHORTANSWER:=var o} = {1:SHORTANSWER:={\}~={ \}} ;</p>
+<p><br />b)    Weisen Sie der Variablen eine Eigenschaft mit den Namen "a" und dem Wert 3 zu. Geben Sie zwei unterschiedliche Varianten an.</p>
+<p style="padding-left: 30px;">a = {1:SHORTANSWER:=o["a"]=3~=o['a']=3~=o.a=3} ;</p>
+<p style="padding-left: 30px;">a = {1:SHORTANSWER:=o["a"]=3~=o['a']=3~=o.a=3} ;</p>
+<p><br />c)    Entfernen Sie die Eigenschaft a vom Objekt o.</p>
+<p style="padding-left: 30px;">{1:SHORTANSWER:=delete o.a~=delete o["a"]~=delete o['a']} ;</p>
+<p> </p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+  </question>
+
+</quiz>

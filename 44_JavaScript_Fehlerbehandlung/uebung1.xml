@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/05 Fehlerbehandlung</text>
+
+    </category>
+  </question>
+
+<!-- question: 2648  -->
+  <question type="multichoice">
+    <name>
+      <text>Unterscheidung zwischen Ausnahmen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Eine Ausnahme wird mittels einer try-catch-Klausel gefangen. Wie kann zwischen unterschiedlichen Arten von Ausnahmen unterschieden werden?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>Bei der catch-Klausel kann der Typ der zu fangenden Ausnahme angegeben werden. Beispiel:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">try {</span><br /><span style="font-family: courier new,courier,monospace;">    // some exception</span><br /><span style="font-family: courier new,courier,monospace;">} catch (SyntaxError ex) {</span><br /><span style="font-family: courier new,courier,monospace;">    // if a SyntaxError occured</span><br /><span style="font-family: courier new,courier,monospace;">}</span><br /><br /></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>In der catch-Klausel kann der Typ der Exception geprüft werden. Beispiel:</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">try {</span><br /><span style="font-family: courier new,courier,monospace;">    // some exception</span><br /><span style="font-family: courier new,courier,monospace;">} catch (ex) {</span><br /><span style="font-family: courier new,courier,monospace;">    if (ex instanceof SyntaxError) {</span><br /><span style="font-family: courier new,courier,monospace;">        // if a SyntaxError occured</span><br /><span style="font-family: courier new,courier,monospace;">    }</span><br /><span style="font-family: courier new,courier,monospace;">}</span><br /><br /></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 2647  -->
+  <question type="multichoice">
+    <name>
+      <text>Wertetypen für Exceptions</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Eine Ausnahme (Exception) wird mittels <span style="font-family: courier new,courier,monospace;">throw</span> geworfen. Welche Typen von Werte sind als Argumente von throw erlaubt?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>Es sind nur Objekttypen, aber keine Basistypen, wie String, erlaubt.</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>Es sind nur Basistypen, wie String, aber keine Objekttypen, erlaubt.</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Es sind alle Typen von Werten erlaubt.</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telefonbuch Version 4</title>
+    <script type="application/javascript" src="telbuch_v4.js"></script>
+	<script>
+	  var defaultContacts = [ 
+	  	new Contact("Hauser Ulrich", "+41 81 286 24 25"), 
+	  	new Contact("Hofstetter Rolf", "+41 81 286 24 26"),
+	  	new Contact("Studer Martin", "+41 81 286 24 27") ];
+
+	  var contacts = new Contacts(defaultContacts);
+	  
+	  var localStorageAvailable = 'localStorage' in window && window.localStorage !== null;
+  
+	  function init () {
+		displayContacts();
+	  }
+	  
+	  function displayContacts() {
+        var displayTable = document.getElementById("displayContacts");
+        displayTable.innerHTML = "";
+        contacts.getContacts().forEach(function(contact) {
+          var tr = document.createElement("TR");
+          var tdName = document.createElement("TD");
+          tdName.textContent = contact.name;
+		  tr.appendChild(tdName);
+          var tdTelNo = document.createElement("TD");
+          tdTelNo.textContent = contact.telNo;
+		  tr.appendChild(tdTelNo);
+		  displayTable.appendChild(tr);
+        });
+	  }
+	  
+	  function storeContact() {
+	    var name = document.getElementById("newName").value;
+	    var telNo = document.getElementById("newTelNo").value;
+		contacts.add(new Contact(name, telNo));
+		contacts.store();
+		displayContacts();
+	  }
+	  
+	  function resetContacts() {
+	  	contacts.setContacts(defaultContacts);
+	  	contacts.store();
+	  	displayContacts();
+	  }
+	</script>
+  </head>
+  <body onload="init();">
+    <h1>Telefonbuch IKT</h1>
+	<div>
+	  <table id="displayContacts">
+	  </table>
+	</div>
+    <div>
+	  <h2>Neuer Eintrag</h2>
+      <p>
+	    <label for="newName">Name: </label><input id="newName" name="newName" type="text"><br/>
+	    <label for="newTelNo">Telefonnummer: </label><input id="newTelNo" name="newTelNo" type="tel"><br/>
+	  </p>
+	  <button type="button" onclick="storeContact();">Eintragen</button>
+    </div>
+	<div>
+	  <button type="button" onclick="resetContacts();">Lokale Einträge löschen ...</button>
+	</div>
+  </body>
+</html>

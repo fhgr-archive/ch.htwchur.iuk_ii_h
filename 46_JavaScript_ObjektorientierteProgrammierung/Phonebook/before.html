@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<title>Phonebook</title>
+</head>
+
+<body>
+
+<h1>Entries</h1>
+<ol id="entries">
+</ol>
+<h1>Search</h1>
+<form onsubmit="return filterByLastName()">
+	Name: <input id="lastName" type="text"> <input type="submit" value="Suche">
+</form>
+<script type="text/javascript">
+			var phonebook = [ {
+			    "firstName" : "Fritz",
+			    "lastName" : "Fischer",
+			    "number" : "081 111 11 11"
+			}, {
+			    "firstName" : "Hans",
+			    "lastName" : "Huber",
+			    "number" : "081 222 22 22"
+			} ];
+			
+
+			// all entries
+			var ol = document.getElementById("entries");
+			ol.innerHTML = "";
+			phonebook.forEach(function(entry) {
+				var li = document.createElement("li");
+				li.innerHTML = entry.firstName + " " + entry.lastName + ": " + entry.number;
+				ol.appendChild(li);
+			});
+			
+			// selected entries
+			function filterByLastName() {
+				var searchName = document.getElementById("lastName");
+				var name = searchName.value;
+				var ol = document.getElementById("entries");
+				ol.innerHTML = "";
+				phonebook.forEach(function(entry) {
+					if (entry.lastName.indexOf(name) !== -1) {
+						var li = document.createElement("li");
+						li.innerHTML = entry.firstName + " " + entry.lastName + ": " + entry.number;
+						ol.appendChild(li);
+					}
+				});
+				return false;
+			}
+        </script>
+
+</body>
+
+</html>

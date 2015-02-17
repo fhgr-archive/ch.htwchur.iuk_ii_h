@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telefonbuch Version 2</title>
+	<script>
+	
+	  var contacts = [];
+	  var localStorageAvailable = 'localStorage' in window && window.localStorage !== null;
+  
+	  function init () {
+		if (localStorageAvailable && localStorage.newEntries) {
+		  contacts = JSON.parse(localStorage.getItem("newEntries"));
+		} else {
+			contacts = [];
+		    contacts.push({name: "Hauser Ulrich", telNo: "+41 81 286 24 25"});
+		    contacts.push({name: "Hofstetter Rolf", telNo: "+41 81 286 24 26"});
+		    contacts.push({name: "Studer Martin", telNo: "+41 81 286 24 27"});
+		}
+		displayContacts();
+	  }
+	  
+	  function displayContacts () {
+        var displayTable = document.getElementById("displayContacts");
+        displayTable.innerHTML = "";
+		for (var i=0;i<contacts.length;i++) {
+		  var contact = contacts[i];
+          var tr = document.createElement("TR");
+          var tdName = document.createElement("TD");
+          tdName.textContent = contact.name;
+		  tr.appendChild(tdName);
+          var tdTelNo = document.createElement("TD");
+          tdTelNo.textContent = contact.telNo;
+		  tr.appendChild(tdTelNo);
+		  displayTable.appendChild(tr);
+        }
+	  }
+	  
+	  function storeContact () {
+	    var name = document.getElementById("newName").value;
+	    var telNo = document.getElementById("newTelNo").value;
+		contacts.push({name: name, telNo: telNo});
+		localStorage.newEntries = JSON.stringify(contacts);
+		displayContacts();
+	  }
+	  
+	  function setContactsToDefaults() {
+	  	localStorage.clear();
+	  	init();
+	  }
+	  
+	</script>
+  </head>
+  <body onload="init();">
+    <h1>Telefonbuch IKT</h1>
+	<div>
+	  <table id="displayContacts">
+	  </table>
+	</div>
+    <div>
+	  <h2>Neuer Eintrag</h2>
+      <p>
+	    <label for="newName">Name: </label><input id="newName" name="newName" type="text"><br/>
+	    <label for="newTelNo">Telefonnummer: </label><input id="newTelNo" name="newTelNo" type="tel"><br/>
+	  </p>
+	  <button type="button" onclick="storeContact();">Eintragen</button>
+    </div>
+	<div>
+	  <button type="button" onclick="setContactsToDefaults();">Zur&uml;cksetzen</button>
+	</div>
+  </body>
+</html>

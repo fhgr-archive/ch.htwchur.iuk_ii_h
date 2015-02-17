@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/06 Funktionale Programmierung</text>
+
+    </category>
+  </question>
+
+<!-- question: 2649  -->
+  <question type="essay">
+    <name>
+      <text>Einsatz von map</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>In aktuellen Versionen von JavaScript stehen für Arrays die Methoden map, filter und reduce zur Verfügung.</p>
+<p>Setzen Sie die Funktion map ein, um die numerischen Werte in einer Liste zu quadrieren.</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">[1,2,3].map( <span style="background-color: #c0c0c0;">             </span> )</span></p>
+<p>Das Resultat sollte [1,4,9] sein. Sie dürfen nur den grau markierten Bereich nutzen.<br /><br /></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>[1,2,3].map ( function(wert) { return wert*wert; } )</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>5</responsefieldlines>
+    <attachments>0</attachments>
+    <graderinfo format="html">
+      <text></text>
+    </graderinfo>
+  </question>
+
+<!-- question: 2650  -->
+  <question type="essay">
+    <name>
+      <text>Einsatz von reduce</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>In aktuellen Versionen von JavaScript stehen für Arrays die Methoden map, filter und reduce zur Verfügung.</p>
+<p>Setzen Sie die Funktion reduce ein, um das Produkt der Werte in einem Array zu berechnen.</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">[1,2,3].reduce( <span style="background-color: #c0c0c0;">             </span> )</span></p>
+<p>Das Resultat sollte 1*2*3 = 6 sein. Sie dürfen nur den grau markierten Bereich nutzen.<br /><br /></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<div>
+<p class="TeilaufgabeCode">[1,2,3].reduce( function(a,b){return a*b}, 1 )</p>
+</div>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>5</responsefieldlines>
+    <attachments>0</attachments>
+    <graderinfo format="html">
+      <text></text>
+    </graderinfo>
+  </question>
+
+</quiz>

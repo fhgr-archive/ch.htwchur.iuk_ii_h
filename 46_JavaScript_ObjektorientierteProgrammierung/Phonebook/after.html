@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<title>Phonebook</title>
+<script src="after.js"></script>
+</head>
+
+<body>
+
+<h1>Entries</h1>
+<ol id="entries">
+</ol>
+<h1>Search</h1>
+<form onsubmit="return filterByLastName()">
+	Name: <input id="lastName" type="text"> <input type="submit" value="Suche">
+</form>
+<script type="text/javascript">
+	var phonebook = new Phonebook ([ 
+		new Entry("Fritz", "Fischer", "081 111 11 11"), 
+		new Entry("Hans", "Huber", "081 222 22 22")
+	]);
+
+	// all entries
+	phonebook.addLisToElementWithId("entries");
+	
+	// selected entries
+	function filterByLastName() {
+		var searchName = document.getElementById("lastName");
+		var lastName = searchName.value;
+		phonebook.addLisToElementWithIdWithLastNameContaining ("entries", lastName);
+		return false;
+	}
+	
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/02 JavaScript Basics</text>
+
+    </category>
+  </question>
+
+<!-- question: 2623  -->
+  <question type="multichoice">
+    <name>
+      <text><![CDATA[Typumwandlung (5 * "5" in Java)]]></text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Lässt sich folgender Ausdrucke in Java kompilieren?</p>
+<p style="padding-left: 30px;">5 * "5"</p>
+<p>Wenn ja, was ist das Resultat des Ausdrucks?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Nein, lässt sich nicht kompilieren (SyntaxError).</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"5*5"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"55"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>25</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"25"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 2622  -->
+  <question type="multichoice">
+    <name>
+      <text><![CDATA[Typumwandlung (5 * "5")]]></text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Was ist das Resultat des folgenden Ausdrucks?</p>
+<p style="padding-left: 30px;"><span style="font-family: courier new,courier,monospace;">5 * "5"</span></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>SyntaxError</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"5*5"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"55"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>25</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>"25"</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 2659  -->
+  <question type="shortanswer">
+    <name>
+      <text><![CDATA[Typumwandlung (5 * "5", Standard) *]]></text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Bei der Auswertung des Ausdruckes<br /><span style="font-family: courier new,courier,monospace;">    5 * "5"</span><br />wird der String <span style="font-family: courier new,courier,monospace;">"5"</span> in die Zahl <span style="font-family: courier new,courier,monospace;">5</span> umgewandelt und dann multipliziert.<br />In welchem Kapitel in der <a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">ECMAScript Language Specification, 5.1 Edition, June 2011</a>, wird definiert, dass bei der Multiplikation eine Typumwandlung stattfindet? Geben Sie das Kapitel in der Form "8.5" für Kapitel 8.5 an.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Kapitel 11.5</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>11.5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>11,5</text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

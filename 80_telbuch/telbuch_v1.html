@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telefonbuch Version 1</title>
+	<script>
+	
+	  var contacts = [];
+	  var newContacts = "";
+	  
+	  function init () {
+	    contacts.push("Hauser Ulrich,+41 81 286 24 25");
+	    contacts.push("Hofstetter Rolf,+41 81 286 24 26");
+	    contacts.push("Studer Martin,+41 81 286 24 27");
+		if (localStorage.newEntries) {
+		  newContacts = localStorage.getItem("newEntries");
+ 		  var splittedNewContacts = newContacts.split(";");
+		  for (var i=0;i<splittedNewContacts.length;i++) {
+		    contacts.push(splittedNewContacts[i]);
+		  }
+		}
+		displayContacts();
+	  }
+	  
+	  function displayContacts () {
+        var displayTable = document.getElementById("displayContacts");
+		for (var i=0;i<contacts.length;i++) {
+          var newTRelement = document.createElement("TR");
+		  var singleContact = contacts[i];
+		  singleContact = singleContact.split(",");
+          var newTDelement_0 = document.createElement("TD");
+		  var newNode_0 = document.createTextNode(singleContact[0]);
+          newTDelement_0.appendChild(newNode_0);
+		  newTRelement.appendChild(newTDelement_0);
+          var newTDelement_1 = document.createElement("TD");
+		  var newNode_1 = document.createTextNode(singleContact[1]);
+          newTDelement_1.appendChild(newNode_1);
+		  newTRelement.appendChild(newTDelement_1);
+		  displayTable.appendChild(newTRelement);
+        }
+	  }
+	  function storeContact () {
+	    var name = document.getElementById ("newName").value;
+	    var telNo = document.getElementById ("newTelNo").value;
+		if (newContacts == "") {
+		  newContacts = name + "," +telNo;
+		}
+		else {
+		  newContacts = newContacts + ";" + name + "," +telNo;
+		}
+		localStorage.newEntries = newContacts;
+		location.reload(); // reload page in order to display the new entry on screen
+	  }
+	</script>
+  </head>
+  <body onload="init();">
+    <h1>Telefonbuch IKT</h1>
+	<div>
+	  <table id="displayContacts">
+	  </table>
+	</div>
+    <div>
+	  <h2>Neuer Eintrag</h2>
+      <p>
+	    <label for="newName">Name: </label><input id="newName" name="newName" type="text"><br/>
+	    <label for="newTelNo">Telefonnummer: </label><input id="newTelNo" name="newTelNo" type="tel"><br/>
+	  </p>
+	  <button type="button" onclick="storeContact();">Eintragen</button>
+    </div>
+	<div>
+	  <button type="button" onclick="localStorage.clear();">Lokale Einträge löschen ...</button>
+	</div>
+  </body>
+</html>

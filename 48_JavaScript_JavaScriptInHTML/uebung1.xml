@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/09 JavaScript in HTML</text>
+
+    </category>
+  </question>
+
+<!-- question: 2656  -->
+  <question type="essay">
+    <name>
+      <text>Würfeln</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Schreiben Sie eine HTML-Datei, welche mittels JavaScript eine Zufallszahl im Bereich von 1 bis 6 ausgibt. In JavaScript können Sie mittels folgender Anweisung<br />    Math.floor((Math.random()*6)+1);<br />eine entsprechend Zahl generieren. Ergänzen Sie folgende HTML-Datei:<br /><span style="font-family: courier new,courier,monospace;">&lt;html&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;head&gt;&lt;title&gt;Zufallszahl&lt;/title&gt;&lt;/head&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;body&gt;</span><br /><span style="font-family: courier new,courier,monospace;">    &lt;!-- Hier ergänzen --&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;/body&gt;</span><br /><span style="font-family: courier new,courier,monospace;">&lt;/html&gt;</span><br /><br /><br /></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>10</responsefieldlines>
+    <attachments>0</attachments>
+    <graderinfo format="html">
+      <text><![CDATA[<p>Zufallszahl: <br />&lt;script type="text/javascript"&gt;<br />var zahl = Math.floor((Math.random()*6)+1);<br />document.write(zahl);<br />&lt;/script&gt;<br /><br /></p>]]></text>
+    </graderinfo>
+  </question>
+
+<!-- question: 2655  -->
+  <question type="multichoice">
+    <name>
+      <text>Einbindung von JavaScript</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>JavaScript kann entweder direkt in HTML-Dateien integriert oder in externe Dateien ausgelagert werden.<br />Welche Vorteile hat die Auslagerung in externe Dateien?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text></text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text></text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text></text>
+    </incorrectfeedback>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Die JavaScript-Datei kann wiederverwendet werden.</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>Die JavaScript-Datei kann performanter ausgeführt werden.</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="-100" format="html">
+      <text><![CDATA[<p>Die JavaScript-Datei benötigt weniger Übertragungskapazität.<br /><br /></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Phonebook</title>
+    </head>
+    <body>
+        <h1>Entries</h1>
+        <ol id="entries">
+        </ol>
+        <script type="text/javascript">
+            var entry1 = "Fritz Fischer 081 111 11 11";
+            var entry2 = "Hans Huber 81 222 22 22";
+
+            var ol = document.getElementById("entries");
+            var li1 = document.createElement("li");
+            li1.innerHTML = entry1;
+            ol.appendChild(li1);
+
+            var li2 = document.createElement("li");
+            li2.innerHTML = entry2;
+            ol.appendChild(li2);
+    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Phonebook</title>
+    </head>
+    <body>
+        <h1>Entries</h1>
+        <ol id="entries">
+        </ol>
+        <script type="text/javascript">
+	        var phonebook = [ {
+                "firstName" : "Fritz",
+                "lastName" : "Fischer",
+                "number" : "081 111 11 11"
+            }, {
+                "firstName" : "Hans",
+                "lastName" : "Huber",
+                "number" : "081 222 22 22"
+            } ];
+
+			var ol = document.getElementById("entries");
+			for ( var index = 0; index < phonebook.length; index++) {
+				var entry = phonebook[index];
+				var li = document.createElement("li");
+				li.innerHTML = entry.firstName + " " + entry.lastName + ": " + entry.number;
+				ol.appendChild(li);
+			}    
+        </script>
+    </body>
+</html>

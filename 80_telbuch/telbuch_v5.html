@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telefonbuch Version 5</title>
+    <script type="application/javascript" src="telbuch_v5.js"></script>
+	<script>
+		window.onload = function() {
+			var defaultContacts = [ 
+			  	new Contact("Hauser Ulrich", "+41 81 286 24 25"), 
+			  	new Contact("Hofstetter Rolf", "+41 81 286 24 26"),
+			  	new Contact("Studer Martin", "+41 81 286 24 27") ];
+
+			var contacts = new Contacts(defaultContacts);
+		  
+			function displayContacts() {
+		        var displayTable = document.getElementById("displayContacts");
+		        displayTable.innerHTML = "";
+		        contacts.getContacts().forEach(function(contact) {
+		          var tr = document.createElement("TR");
+		          var tdName = document.createElement("TD");
+		          tdName.textContent = contact.name;
+				  tr.appendChild(tdName);
+		          var tdTelNo = document.createElement("TD");
+		          tdTelNo.textContent = contact.telNo;
+				  tr.appendChild(tdTelNo);
+				  displayTable.appendChild(tr);
+		        });
+			}
+
+			function addContact() {
+			    var name = document.getElementById("newName").value;
+			    var telNo = document.getElementById("newTelNo").value;
+				contacts.add(new Contact(name, telNo));
+				contacts.store();
+		
+				displayContacts();
+			}
+
+			function resetContacts() {
+			  	contacts.setContacts(defaultContacts);
+			  	contacts.store();
+			  	
+			  	displayContacts();
+			}
+		  
+		  	displayContacts();
+
+			document.getElementById("storeButton").onclick = addContact;
+			document.getElementById("resetButton").onclick = resetContacts;
+		  
+		 }
+	</script>
+  </head>
+  <body>
+    <h1>Telefonbuch IKT</h1>
+	<div>
+	  <table id="displayContacts">
+	  </table>
+	</div>
+    <div>
+	  <h2>Neuer Eintrag</h2>
+      <p>
+	    <label for="newName">Name: </label><input id="newName" name="newName" type="text"><br/>
+	    <label for="newTelNo">Telefonnummer: </label><input id="newTelNo" name="newTelNo" type="tel"><br/>
+	  </p>
+	  <button id="storeButton" type="button">Eintragen</button>
+    </div>
+	<div>
+	  <button id="resetButton" type="button">Auf Standardeintr&auml;ge zur&uuml;ckstellen ...</button>
+	</div>
+  </body>
+</html>

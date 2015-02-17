@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Standard für IuK_IV_M-FS13/11 Eventhandling im Browser</text>
+
+    </category>
+  </question>
+
+<!-- question: 2658  -->
+  <question type="essay">
+    <name>
+      <text>Event-Handler hinzufügen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Folgende HTML-Datei enthält zwei Buttons. Fügen Sie mittels JavaScript dem Element &lt;body&gt; einen click-EventListener hinzu, der in der Capturing-Phase den click-Event abfängt und abbricht. Wird der Event abgefangen, soll der Text des geklickten Buttons mittels alert angezeigt werden. Nutzen Sie das <a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html">DOM Level 2 Event Model</a>.</p>
+<p>Ergänzen Sie folgenden Codeteil im markierten Bereich:</p>
+<p><span style="font-family: courier new,courier,monospace;">&lt;html&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;head&gt;&lt;title&gt;Event-Handling&lt;/title&gt;&lt;/head&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;script type="text/javascript"&gt;</span><br /><span style="font-family: courier new,courier,monospace;">      function onload() {</span><br /><span style="font-family: courier new,courier,monospace;"> </span><br /><span style="font-family: courier new,courier,monospace;">        // Hier kommt Ihr Code</span><br /><span style="font-family: courier new,courier,monospace;"> </span><br /><span style="font-family: courier new,courier,monospace;">     }</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;/script&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;body id="body" onload="onload()"&gt;</span><br /><span style="font-family: courier new,courier,monospace;">     &lt;button id="1"&gt;Button 1&lt;/button&gt;</span><br /><span style="font-family: courier new,courier,monospace;">     &lt;button id="2"&gt;Button 2&lt;/button&gt;</span><br /><span style="font-family: courier new,courier,monospace;">  &lt;/body&gt;</span><br /><span style="font-family: courier new,courier,monospace;">&lt;/html&gt;</span><br /><br />Links:</p>
+<ul>
+<li><a href="http://www.quirksmode.org/js/events_order.html">http://www.quirksmode.org/js/events_order.html</a></li>
+<li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html">http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html</a></li>
+</ul>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>&lt;html&gt;<br />  &lt;head&gt;&lt;title&gt;Event-Handling&lt;/title&gt;&lt;/head&gt;<br />  &lt;script type="text/javascript"&gt;<br />      function onload() {<br />          var body = document.getElementById("body");<br />          body.addEventListener("click", <br />              function(event) { <br />                  alert(event.target.innerHTML);<br />                  event.stopPropagation();<br />              }, <br />              true);<br />      }<br />  &lt;/script&gt;<br />  &lt;body id="body" onload="onload()"&gt;<br />     &lt;button id="1"&gt;Button 1&lt;/button&gt;<br />     &lt;button id="2"&gt;Button 2&lt;/button&gt;<br />  &lt;/body&gt;<br />&lt;/html&gt;<br /><br /></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <responseformat>monospaced</responseformat>
+    <responsefieldlines>15</responsefieldlines>
+    <attachments>1</attachments>
+    <graderinfo format="html">
+      <text></text>
+    </graderinfo>
+  </question>
+
+</quiz>

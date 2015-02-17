@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Beispiele</title>
+</head>
+
+<body>
+
+
+<h1>Another useful type of higher-order function modifies the function value it is given: ...</h1>
+
+<script type="application/javascript">
+// Funktion even
+function even(x) {
+	return x%2 === 0;
+}
+even(4);
+even(3);
+
+// Funktion odd: Ansatz 1
+function odd(x) {
+	return x%2 === 1;
+}
+
+// Funktion odd: mit negate
+function negate(f) {
+	return function(x) {
+		return !f(x);
+	}
+}
+
+var odd = negate(even);
+odd(3);
+
+function istTeilerVon(zahl1, zahl2) {
+	return zahl2 % zahl1 === 0; 
+}
+istTeilerVon(3, 9);
+istTeilerVon(4, 9);
+
+var istNichtTeilerVon = negate(istTeilerVon);
+istNichtTeilerVon(4,9);
+
+</script>
+
+</body>
+
+</html>
