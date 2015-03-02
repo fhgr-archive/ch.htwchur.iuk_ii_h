@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Phonebook</title>
+    </head>
+    <body>
+
+<script type="text/javascript">
+// The names of the arguments of a function…
+var variable = "top-level";
+
+function logVariable() {
+	console.log("inside printVariable, the variable holds '" + variable + "'.");
+}
+
+function test() {
+	var variable = "local";
+	console.log("inside test, the variable holds '" + variable + "'.");
+	logVariable();
+}
+
+test();
+</script>
+
+<script type="text/javascript">
+// The names of the arguments of a function…
+function makeAddFunction(amount) {
+  function add(number) {
+    return number + amount;
+  }
+  return add;
+}
+
+var addTwo = makeAddFunction(2);
+var addFive = makeAddFunction(5);
+
+show(addTwo(1) + addFive(1));
+</script>
+
+    </body>
+</html>
