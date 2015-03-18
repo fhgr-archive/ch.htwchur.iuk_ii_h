@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Aufgabe 4</title>
+
+<script type="application/javascript">
+	var intervalId;
+	
+	function start() {
+		var sekunden = 0;
+		var sekundenElement = document.getElementById("sekunden");
+		sekundenElement.value = sekunden;
+		
+		intervalId = setInterval(function() {
+			sekunden++;
+			sekundenElement.value = sekunden;
+		}, 1000);	
+	}
+	
+	function stop() {
+		clearInterval(intervalId);
+	}
+	
+</script>
+</head>
+
+<body>
+	<input id="sekunden" type="number" readonly="">
+	<button onclick="start();">Start</button>
+	<button onclick="stop();">Stopp</button>
+</body>
+
+</html>
