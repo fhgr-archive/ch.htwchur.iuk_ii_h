@@ -1,0 +1,21 @@
+<html>
+<body>
+<script type="text/javascript">
+
+var variable = "top-level";
+
+function logVariable() {
+	console.log("inside printVariable, the variable holds '" + variable + "'.");
+}
+
+function test() {
+	var variable = "local";
+	console.log("inside test, the variable holds '" + variable + "'.");
+	logVariable();
+}
+
+test();
+
+</script>
+</body>
+</html>

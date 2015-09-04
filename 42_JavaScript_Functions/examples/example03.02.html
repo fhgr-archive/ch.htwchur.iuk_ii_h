@@ -1,0 +1,17 @@
+<html>
+<body>
+<script type="text/javascript">
+
+var variable = "top-level";
+function parentFunction() {
+  var variable = "local";
+  function childFunction() {
+    console.log(variable);
+  }
+  childFunction();
+}
+parentFunction();
+
+</script>
+</body>
+</html>
